@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 12px 24px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.header #logo {
+    width: 100px;
+    height: auto;
+    padding: 8px;
+}
+
+.header #logo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.header #logo:not(:hover) {
+    transform: scale(1.00);
+    transition: transform 0.3s;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(88, 87, 87);
+    font-size: 16px;
+}
+
+.navbar ul li a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.hero {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.hero-image {
+    margin-top: 15px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.hero #texto {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: justify;
+}
+
+.logos {
+    width: 135px;
+    height: auto;
+    padding: 8px;
+}
+
+.logos:hover {
+    transform: scale(1.08);
+    transition: transform 0.3s;
+}
+
+.logos:not(:hover) {
+    transform: scale(1.00);
+    transition: transform 0.3s;
+}
+
+.contact {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.call-button {
+    background-color: #065fbf;
+    color: white;
+}
+
+.call-button:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.call-button:not(:hover) {
+    background-color: #065fbf;
+    color: white;
+    transform: scale(1.00);
+    transition: 0.3s;
+}
+
+.whatsapp-button {
+    background-color: #0b9d40;
+    color: white;
+}
+
+.whatsapp-button:hover {
+    background-color: #25cb62;
+    color: white;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.whatsapp-button:not(:hover) {
+    background-color: #0b9d40;
+    color: white;
+    transform: scale(1.00);
+    transition: 0.3s;
+}
+
+.location-button {
+    background-color: #3c3c3c;
+    color: rgb(255, 255, 255);
+}
+
+.location-button:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.location-button:not(:hover) {
+    background-color: #3c3c3c;
+    transform: scale(1.00);
+    transition: 0.3s;
+}
+
+.footer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    margin-top: 20px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+}

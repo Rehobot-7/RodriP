@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluquería de Caballeros</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Resources/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header class="header">
+        <img id="logo" src="Resources/RODRI.png" alt="Logo Peluquería Rodri">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#contacto">Reserva tu cita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="mainsection" class="hero">
+        <h1><strong>Peluquería Masculina en Ourense</strong></h1>
+        <p id="texto">Disfruta de la experiencia de un servicio exclusivo, con más de 20 años de trayectoria en cortes masculinos de alta calidad, atención personalizada y un ambiente acogedor pensado para ti.</p>
+        <img src="Resources/main.png" alt="Peluquería clásica" class="hero-image">
+        <h2>Un corte a la altura de un caballero</h2>
+        <p>Reserva tu cita y disfruta de un servicio exclusivo.</p>
+    </section>
+
+    <section id="servicios" class="hero">
+        <h3>Nuestros servicios</h3>
+        <div class="service">
+            <img class="logos" src="Resources/tijeras.png" alt="Cortes masculinos">
+            <p><strong>Cortes masculinos</strong></p>
+        </div>
+        <div class="service">
+            <img class="logos" src="Resources/masajes.png" alt="Masajes">
+            <p><strong>Masajes</strong></p>
+        </div>
+        <div class="service">
+            <img class="logos" src="Resources/depilaciones.png" alt="Depilaciones">
+            <p><strong>Depilaciones</strong></p>
+        </div>
+    </section>
+
+    <section id="horarios" class="hero">
+        <h3>Horarios</h3>
+        <p>Lunes, martes, jueves y viernes: 9:30 - 13:30 / 16:00 - 20:00</p>
+        <p>Miércoles: 16:00 - 20:00</p>
+        <p>Sábados: 9:30 - 13:30</p>
+        <p>Domingos y festivos: Cerrado</p>
+        <p>¡Te esperamos!</p>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h3>Reserva tu cita</h3>
+        <p>Llámanos o escríbenos por WhatsApp para agendar tu visita.</p>
+        <p>Encuéntranos en Juan XXIII, 3 Galerías, Loc. 11 - 32003 - Ourense.</p>
+        <div class="contact-buttons">
+            <button class="call-button">📞 Llamar</button>
+            <button class="whatsapp-button">💬 WhatsApp</button>
+            <button class="location-button">📍 Ubicación</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 <strong>Peluquería Rodri</strong> | Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelector(".call-button").addEventListener("click", function () {
+                window.location.href = "tel:+34988210900";
+            });
+
+            document.querySelector(".whatsapp-button").addEventListener("click", function () {
+                window.location.href = "https://wa.me/667840940";
+            });
+
+            document.querySelector(".location-button").addEventListener("click", function () {
+                window.location.href = "https://www.google.com/maps?q=42°20'25.0\"N+7°51'58.8\"W";
+            });
+        });
+    </script>
+
+</body>
+</html>
