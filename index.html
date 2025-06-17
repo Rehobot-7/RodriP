@@ -56,7 +56,8 @@
         <p>Llámanos o escríbenos por WhatsApp para agendar tu visita.</p>
         <p>Encuéntranos en Juan XXIII, 3 Galerías, Loc. 11 - 32003 - Ourense.</p>
         <div class="contact-buttons">
-            <button class="call-button">📞 Llamar</button>
+            <button class="fijo-button">📞 Fijo</button>
+            <button class="movil-button">📱 Móvil</button>
             <button class="whatsapp-button">💬 WhatsApp</button>
             <button class="location-button">📍 Ubicación</button>
         </div>
@@ -73,8 +74,12 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
-            document.querySelector(".call-button").addEventListener("click", function () {
+            document.querySelector(".fijo-button").addEventListener("click", function () {
                 window.location.href = "tel:+34988210900";
+            });
+
+            document.querySelector(".movil-button").addEventListener("click", function () {
+                window.location.href = "tel:+34667840940";
             });
 
             document.querySelector(".whatsapp-button").addEventListener("click", function () {
