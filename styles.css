@@ -1,249 +1,768 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
+/* =========================================
+   PELUQUERÍA RODRI — Estilos rediseñados
+   Estilo: Clásico refinado, blanco y negro
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+
+/* === VARIABLES === */
+:root {
+    --negro: #111111;
+    --blanco: #ffffff;
+    --gris-claro: #f7f7f5;
+    --gris-medio: #e8e8e6;
+    --gris-texto: #555555;
+    --acento: #c8a96e;        /* dorado sutil para detalles */
+    --sombra: 0 2px 20px rgba(0,0,0,0.08);
+    --sombra-fuerte: 0 4px 32px rgba(0,0,0,0.14);
+    --radio: 0px;             /* sin border-radius — más formal */
+    --fuente-titulo: 'Playfair Display', Georgia, serif;
+    --fuente-cuerpo: 'Lato', Arial, sans-serif;
 }
 
+/* === RESET Y BASE === */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: var(--gris-claro);
+    color: var(--negro);
+    line-height: 1.7;
+}
+
+/* === HEADER === */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 12px 24px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--blanco);
+    padding: 0 40px;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--gris-medio);
+    box-shadow: 0 1px 12px rgba(0,0,0,0.06);
 }
 
 .header #logo {
-    width: 100px;
+    width: 90px;
     height: auto;
-    padding: 8px;
+    display: block;
+    transition: opacity 0.3s ease;
 }
 
 .header #logo:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
+    opacity: 0.75;
+    transform: none;
 }
 
 .header #logo:not(:hover) {
-    transform: scale(1.00);
-    transition: transform 0.3s;
+    transform: none;
 }
 
+/* === NAVEGACIÓN === */
 .navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-.navbar ul li {
-    margin: 0 10px;
+    gap: 8px;
 }
 
 .navbar ul li a {
     text-decoration: none;
-    color: rgb(88, 87, 87);
-    font-size: 16px;
+    color: var(--negro);
+    font-family: var(--fuente-cuerpo);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border: 1.5px solid var(--negro);
+    transition: background-color 0.25s ease, color 0.25s ease;
+    display: inline-block;
 }
 
 .navbar ul li a:hover {
-    color: #000000;
-    text-decoration: underline;
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-decoration: none;
 }
 
-.hero {
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+/* === SECCIÓN PRINCIPAL (HERO) === */
+.hero-principal {
+    background-color: var(--blanco);
+    padding: 80px 40px 60px;
+    text-align: center;
+    border-bottom: 1px solid var(--gris-medio);
 }
 
-.hero-image {
-    margin-top: 15px;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 8px;
+.hero-principal h1 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 700;
+    color: var(--negro);
+    letter-spacing: 0.02em;
+    margin: 0 0 24px;
+    line-height: 1.2;
 }
 
-.hero .texto {
-    margin-left: 2rem;
-    margin-right: 2rem;
+.hero-principal h1 strong {
+    font-weight: 700;
+}
+
+.hero-principal .subtitulo-elegante {
+    display: block;
+    font-family: var(--fuente-titulo);
+    font-style: italic;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--gris-texto);
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+.hero-principal .texto {
+    max-width: 620px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    color: var(--gris-texto);
+    font-weight: 300;
+    line-height: 1.8;
     text-align: justify;
 }
 
+/* Línea decorativa */
+.linea-decorativa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto 40px;
+    max-width: 300px;
+}
+
+.linea-decorativa::before,
+.linea-decorativa::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: var(--negro);
+}
+
+.linea-decorativa span {
+    font-size: 18px;
+    color: var(--negro);
+    line-height: 1;
+}
+
+.hero-principal .hero-image {
+    width: 100%;
+    max-width: 700px;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 40px;
+    border: 1px solid var(--gris-medio);
+    filter: grayscale(20%);
+}
+
+.hero-principal h2 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    font-weight: 600;
+    color: var(--negro);
+    margin: 0 0 12px;
+}
+
+.hero-principal .cta-texto {
+    font-size: 1rem;
+    color: var(--gris-texto);
+    margin: 0;
+}
+
+/* === SECCIONES GENERALES === */
+.seccion {
+    background-color: var(--blanco);
+    padding: 60px 40px;
+    margin: 24px auto;
+    max-width: 900px;
+    border: 1px solid var(--gris-medio);
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.seccion h3 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--negro);
+    letter-spacing: 0.03em;
+    margin: 0 0 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.seccion h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: var(--negro);
+    margin: 16px auto 0;
+}
+
+/* === SERVICIOS === */
+#servicios.seccion {
+    background-color: var(--negro) !important;
+    border-color: var(--negro);
+}
+
+#servicios.seccion h3 {
+    color: var(--blanco);
+}
+
+#servicios.seccion h3::after {
+    background-color: var(--acento);
+}
+
+.servicios-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.service {
+    flex: 1;
+    min-width: 160px;
+    max-width: 200px;
+    text-align: center;
+    padding: 32px 16px;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    cursor: default;
+}
+
+.service:hover {
+    border-color: var(--acento);
+    background-color: rgba(255,255,255,0.04);
+}
+
+.service .logos {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: invert(1);
+    mix-blend-mode: screen;
+    transition: transform 0.3s ease;
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+}
+
+.service:hover .logos {
+    transform: scale(1.08);
+}
+
+.service:not(:hover) .logos {
+    transform: scale(1.00);
+}
+
+.service p {
+    color: var(--blanco);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 16px 0 0;
+}
+
+/* === HORARIOS === */
+#horarios.seccion {
+    background-color: var(--gris-claro);
+}
+
+.horarios-tabla {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: 480px;
+    margin: 0 auto 24px;
+    text-align: left;
+}
+
+.horario-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    background-color: var(--blanco);
+    border-left: 3px solid transparent;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.horario-fila:hover {
+    border-left-color: var(--negro);
+}
+
+.horario-fila .dia {
+    font-weight: 700;
+    color: var(--negro);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.horario-fila .horas {
+    color: var(--gris-texto);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.horario-fila.cerrado .horas {
+    color: #aaa;
+    font-style: italic;
+}
+
+.horarios-nota {
+    font-family: var(--fuente-titulo);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gris-texto);
+    margin: 0;
+}
+
+/* === CONTACTO === */
+.contact {
+    background-color: var(--blanco);
+    padding: 60px 40px;
+    margin: 24px auto;
+    max-width: 900px;
+    border: 1px solid var(--gris-medio);
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.contact h3 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--negro);
+    margin: 0 0 12px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.contact h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: var(--negro);
+    margin: 16px auto 0;
+}
+
+.contact p {
+    color: var(--gris-texto);
+    font-size: 1rem;
+    margin: 0 0 8px;
+    font-weight: 300;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.contact-buttons button {
+    padding: 14px 28px;
+    border: 2px solid;
+    border-radius: 0;
+    cursor: pointer;
+    font-family: var(--fuente-cuerpo);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.call-button {
+    background-color: var(--negro);
+    color: var(--blanco);
+    border-color: var(--negro);
+}
+
+.call-button:hover {
+    background-color: var(--blanco);
+    color: var(--negro);
+    transform: translateY(-2px);
+}
+
+.call-button:not(:hover) {
+    background-color: var(--negro);
+    color: var(--blanco);
+    transform: translateY(0);
+}
+
+.whatsapp-button {
+    background-color: var(--blanco);
+    color: var(--negro);
+    border-color: var(--negro);
+}
+
+.whatsapp-button:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+    transform: translateY(-2px);
+}
+
+.whatsapp-button:not(:hover) {
+    background-color: var(--blanco);
+    color: var(--negro);
+    transform: translateY(0);
+}
+
+.location-button {
+    background-color: var(--blanco);
+    color: var(--negro);
+    border-color: var(--negro);
+}
+
+.location-button:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+    transform: translateY(-2px);
+}
+
+.location-button:not(:hover) {
+    background-color: var(--blanco);
+    color: var(--negro);
+    transform: translateY(0);
+}
+
+/* === SECCIÓN PÁGINAS LEGALES (hero2) === */
 .hero2 {
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    background-color: var(--blanco);
+    padding: 60px 40px;
+    margin: 24px auto;
+    max-width: 900px;
+    border: 1px solid var(--gris-medio);
+    box-shadow: var(--sombra);
+}
+
+.hero2 h2 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    color: var(--negro);
+    text-align: center;
+    margin: 0 0 12px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.hero2 h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: var(--negro);
+    margin: 16px auto 0;
 }
 
 .hero2 p {
-    text-align: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
     text-align: justify;
+    margin: 0 0 20px;
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.hero2 p strong {
+    color: var(--negro);
+    font-weight: 700;
+}
+
+.hero2 p a,
+.hero2 ul li a {
+    color: var(--negro);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .hero2 ul {
     list-style: none;
-    margin: 0;
+    margin: 0 0 20px;
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 8px;
 }
 
 .hero2 ul li {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 2%;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    padding: 14px 20px;
+    background-color: var(--gris-claro);
+    border-left: 3px solid var(--negro);
+    font-size: 0.93rem;
+    color: var(--gris-texto);
+    font-weight: 300;
+    text-align: left;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
 }
 
-.logos {
-    width: 135px;
-    height: auto;
-    padding: 8px;
+.hero2 ul li strong {
+    color: var(--negro);
 }
 
-.logos:hover {
-    transform: scale(1.08);
-    transition: transform 0.3s;
+/* === OFERTA BANNER === */
+.oferta-banner {
+    margin: 40px auto 0;
+    max-width: 620px;
+    background-color: var(--negro);
+    padding: 40px 40px 36px;
+    text-align: center;
+    position: relative;
 }
 
-.logos:not(:hover) {
-    transform: scale(1.00);
-    transition: transform 0.3s;
+.oferta-etiqueta {
+    display: inline-block;
+    background-color: var(--acento);
+    color: var(--negro);
+    padding: 5px 18px;
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
-.contact {
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+.oferta-texto {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: var(--blanco);
+    margin: 0 0 28px;
+    line-height: 1.6;
+    font-style: italic;
 }
 
-.contact-buttons button {
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+.oferta-texto strong {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--acento);
 }
 
-.fijo-button {
-    background-color: #065fbf;
-    color: white;
+.oferta-pasos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
 }
 
-.fijo-button:hover {
-    background-color: #007bff;
-    color: white;
-    transform: scale(1.05);
-    transition: 0.3s;
+.oferta-paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 130px;
 }
 
-.fijo-button:not(:hover) {
-    background-color: #065fbf;
-    color: white;
-    transform: scale(1.00);
-    transition: 0.3s;
+.oferta-paso span {
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid var(--acento);
+    color: var(--acento);
+    font-family: var(--fuente-titulo);
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.movil-button {
-    background-color: #065fbf;
-    color: white;
+.oferta-paso p {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.78rem;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
 }
 
-.movil-button:hover {
-    background-color: #007bff;
-    color: white;
-    transform: scale(1.05);
-    transition: 0.3s;
+.oferta-separador {
+    color: rgba(255,255,255,0.2);
+    font-size: 1.2rem;
+    padding-top: 6px;
+    align-self: flex-start;
+    margin-top: 6px;
 }
 
-.movil-button:not(:hover) {
-    background-color: #065fbf;
-    color: white;
-    transform: scale(1.00);
-    transition: 0.3s;
+.oferta-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: transparent;
+    color: var(--blanco);
+    font-family: var(--fuente-cuerpo);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
-.whatsapp-button {
-    background-color: #0b9d40;
-    color: white;
-}
-
-.whatsapp-button:hover {
-    background-color: #25cb62;
-    color: white;
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
-.whatsapp-button:not(:hover) {
-    background-color: #0b9d40;
-    color: white;
-    transform: scale(1.00);
-    transition: 0.3s;
-}
-
-.location-button {
-    background-color: #3c3c3c;
-    color: rgb(255, 255, 255);
-}
-
-.location-button:hover {
-    background-color: #000000;
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
-.location-button:not(:hover) {
-    background-color: #3c3c3c;
-    transform: scale(1.00);
-    transition: 0.3s;
-}
-
-.footer {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 10px 0;
-    margin-top: 20px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+.oferta-btn:hover {
+    background-color: var(--acento);
+    border-color: var(--acento);
+    color: var(--negro);
 }
 
 @media (max-width: 768px) {
-    .header {
-        flex-direction: row;
-        text-align: center;
+    .oferta-banner {
+        padding: 32px 24px 28px;
     }
 
-    .navbar ul {
+    .oferta-separador {
+        display: none;
+    }
+
+    .oferta-pasos {
         flex-direction: column;
+        align-items: center;
+        gap: 16px;
     }
 
-    .navbar ul li {
-        margin: 5px 0;
+    .oferta-paso {
+        flex-direction: row;
+        max-width: 100%;
+        text-align: left;
+        gap: 14px;
+    }
+
+    .oferta-paso p {
+        text-align: left;
+    }
+}
+
+/* === FOOTER === */
+.footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 32px 40px;
+    margin-top: 0;
+    text-align: center;
+    box-shadow: none;
+    border-top: 3px solid var(--negro);
+}
+
+.footer p {
+    margin: 6px 0;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.8);
+}
+
+.footer strong {
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.footer a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: var(--blanco);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+        height: 68px;
+    }
+
+    .header #logo {
+        width: 76px;
+    }
+
+    .navbar ul li a {
+        font-size: 11px;
+        padding: 8px 14px;
+        letter-spacing: 0.08em;
+    }
+
+    .hero-principal {
+        padding: 50px 24px 40px;
+    }
+
+    .hero-principal .hero-image {
+        height: 240px;
+    }
+
+    .seccion,
+    .contact,
+    .hero2 {
+        margin: 12px 12px;
+        padding: 40px 24px;
+    }
+
+    .servicios-grid {
+        gap: 16px;
+    }
+
+    .service {
+        min-width: 130px;
+        padding: 24px 12px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-buttons button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .horarios-tabla {
+        max-width: 100%;
     }
 }
 
 @media (min-width: 769px) {
-    .hero, .hero2, .contact {
-        max-width: 900px;
-        margin: 20px auto;
+    .hero-principal {
+        padding: 80px 60px 60px;
     }
 }

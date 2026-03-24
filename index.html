@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peluquería de Caballeros en Ourense</title>
+    <title>Peluquería Rodri — Peluquería de Caballeros en Ourense</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Resources/favicon.ico" type="image/x-icon">
 </head>
@@ -13,60 +13,114 @@
         <a href="index.html"><img id="logo" src="Resources/Rodri.png" alt="Logo Peluquería Rodri"></a>
         <nav class="navbar">
             <ul>
-                <li><a href="#contacto">Reserva tu cita</a></li>
+                <li><a href="#contacto">Reservar cita</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="mainsection" class="hero">
-        <h1><strong>Peluquería Masculina en Ourense</strong></h1>
-        <p class="texto">Disfruta de la experiencia de un servicio exclusivo, con más de 20 años de trayectoria en cortes masculinos de alta calidad, atención personalizada y un ambiente acogedor pensado para ti.</p>
-        <img src="Resources/main.png" alt="Peluquería clásica" class="hero-image">
+    <!-- SECCIÓN PRINCIPAL -->
+    <section id="mainsection" class="hero-principal">
+        <h1><strong>Peluquería Masculina<br>en Ourense</strong></h1>
+        <span class="subtitulo-elegante">Más de 20 años de trayectoria</span>
+
+        <div class="linea-decorativa"><span>✦</span></div>
+
+        <p class="texto">
+            Un espacio dedicado al caballero que valora el detalle, la precisión y la elegancia. 
+            Cortes a tijera, acabados impecables y una atención personalizada que pocos sitios pueden ofrecer. 
+            Bienvenido a Peluquería Rodri.
+        </p>
+
+        <img src="Resources/main.png" alt="Interior Peluquería Rodri, Ourense" class="hero-image">
+
         <h2>Un corte a la altura de un caballero</h2>
-        <p>Reserva tu cita y disfruta de un servicio exclusivo.</p>
-    </section>
+        <p class="cta-texto">Reserva tu cita y disfruta de un servicio exclusivo.</p>
 
-    <section id="servicios" class="hero">
-        <h3>Nuestros servicios</h3>
-        <div class="service">
-            <img class="logos" src="Resources/tijeras.png" alt="Cortes masculinos">
-            <p><strong>Cortes masculinos</strong></p>
-        </div>
-        <div class="service">
-            <img class="logos" src="Resources/masajes.png" alt="Masajes">
-            <p><strong>Masajes</strong></p>
-        </div>
-        <div class="service">
-            <img class="logos" src="Resources/depilaciones.png" alt="Depilaciones">
-            <p><strong>Depilaciones</strong></p>
+        <div class="oferta-banner">
+            <span class="oferta-etiqueta">Oferta de bienvenida</span>
+            <p class="oferta-texto">Llévate un <strong>lavado gratis</strong> en tu primer corte al regalarnos una reseña en Google</p>
+            <div class="oferta-pasos">
+                <div class="oferta-paso"><span>1</span><p>Hazte tu corte con nosotros</p></div>
+                <div class="oferta-separador">—</div>
+                <div class="oferta-paso"><span>2</span><p>Deja tu reseña en Google</p></div>
+                <div class="oferta-separador">—</div>
+                <div class="oferta-paso"><span>3</span><p>Muéstranosla y reclama tu lavado gratis</p></div>
+            </div>
+            <a href="https://share.google/Vd05PaprRUxzMQgtF" target="_blank" class="oferta-btn">Dejar mi reseña ✦</a>
         </div>
     </section>
 
-    <section id="horarios" class="hero">
+    <!-- SERVICIOS -->
+    <section id="servicios" class="seccion">
+        <h3>Nuestros Servicios</h3>
+        <div class="servicios-grid">
+            <div class="service">
+                <img class="logos" src="Resources/tijeras.png" alt="Cortes masculinos">
+                <p>Cortes masculinos</p>
+            </div>
+            <div class="service">
+                <img class="logos" src="Resources/masajes.png" alt="Masajes">
+                <p>Masajes</p>
+            </div>
+            <div class="service">
+                <img class="logos" src="Resources/depilaciones.png" alt="Depilaciones">
+                <p>Depilaciones</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HORARIOS -->
+    <section id="horarios" class="seccion">
         <h3>Horarios</h3>
-        <p>Lunes, martes, jueves y viernes: 9:30 - 13:30 / 16:00 - 20:00</p>
-        <p>Miércoles: 16:00 - 20:00</p>
-        <p>Sábados: 9:30 - 13:30</p>
-        <p>Domingos y festivos: Cerrado</p>
-        <p>¡Te esperamos!</p>
+        <div class="horarios-tabla">
+            <div class="horario-fila">
+                <span class="dia">Lunes</span>
+                <span class="horas">9:30 – 13:30 / 16:00 – 20:00</span>
+            </div>
+            <div class="horario-fila">
+                <span class="dia">Martes</span>
+                <span class="horas">9:30 – 13:30 / 16:00 – 20:00</span>
+            </div>
+            <div class="horario-fila">
+                <span class="dia">Miércoles</span>
+                <span class="horas">16:00 – 20:00</span>
+            </div>
+            <div class="horario-fila">
+                <span class="dia">Jueves</span>
+                <span class="horas">9:30 – 13:30 / 16:00 – 20:00</span>
+            </div>
+            <div class="horario-fila">
+                <span class="dia">Viernes</span>
+                <span class="horas">9:30 – 13:30 / 16:00 – 20:00</span>
+            </div>
+            <div class="horario-fila">
+                <span class="dia">Sábado</span>
+                <span class="horas">9:30 – 13:30</span>
+            </div>
+            <div class="horario-fila cerrado">
+                <span class="dia">Dom. y festivos</span>
+                <span class="horas">Cerrado</span>
+            </div>
+        </div>
+        <p class="horarios-nota">¡Te esperamos!</p>
     </section>
 
+    <!-- CONTACTO -->
     <section id="contacto" class="contact">
-        <h3>Reserva tu cita</h3>
+        <h3>Reserva tu Cita</h3>
         <p>Llámanos o escríbenos por WhatsApp para agendar tu visita.</p>
-        <p>Encuéntranos en Juan XXIII, 3 Galerías, Loc. 11 - 32003 - Ourense.</p>
+        <p>Juan XXIII, 3 · Galerías, Local 11 · 32003 · Ourense</p>
         <div class="contact-buttons">
-            <button class="fijo-button">📞 Fijo</button>
-            <button class="movil-button">📱 Móvil</button>
+            <button class="call-button">📞 Llamar</button>
             <button class="whatsapp-button">💬 WhatsApp</button>
-            <button class="location-button">📍 Ubicación</button>
+            <button class="location-button">📍 Cómo llegar</button>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2025 <strong>Peluquería Rodri</strong> | Todos los derechos reservados.</p>
+        <p>&copy; 2025 <strong>Peluquería Rodri</strong> · Todos los derechos reservados.</p>
         <p>
-            <a href="politica-privacidad.html">Política de Privacidad</a> | 
+            <a href="politica-privacidad.html">Política de Privacidad</a> &nbsp;|&nbsp;
             <a href="aviso-legal.html">Aviso Legal</a>
         </p>
     </footer>
@@ -74,12 +128,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
-            document.querySelector(".fijo-button").addEventListener("click", function () {
+            document.querySelector(".call-button").addEventListener("click", function () {
                 window.location.href = "tel:+34988210900";
-            });
-
-            document.querySelector(".movil-button").addEventListener("click", function () {
-                window.location.href = "tel:+34667840940";
             });
 
             document.querySelector(".whatsapp-button").addEventListener("click", function () {
